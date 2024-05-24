@@ -32,7 +32,7 @@ This repository contains the implementation of SCAN (Self-Confidence and Analyti
 
 ## Model Files
 We provide around 76 trained model files that can be downloaded from the following link:
-[Download SCAN Model Files](https://your-model-download-link-here)
+[Download SCAN Model Files](#)
 
 ## Example Usage
 Here is a brief example of how to use the SCAN model:
