@@ -66,7 +66,8 @@ Here is a brief example of how to use the SCAN model:
 
   scanner=SCAN(target_model = target_model, target_layer = 228)\
                   .set_preprocess(tf.keras.applications.mobilenet_v3.preprocess_input)\
-                  .set_dataset(train_ds).set_validation_dataset(valid_ds)\
+                  .set_dataset(train_ds)\
+                  .set_validation_dataset(valid_ds)\
                   .generate_decoder(is_Transformer=False)\
                   .compile(loss_alpha=4.0)
 
