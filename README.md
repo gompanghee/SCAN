@@ -33,9 +33,16 @@ This repository contains the implementation of SCAN (Self-Confidence and Analyti
 ## Model Files
 We provide around 76 trained model files that can be downloaded from the following link:
 
-[Download SCAN Model - ConvNeXt Small](https://file.io/SnBvgI4uflSs)
+[Download SCAN Model - ResNet50v2](https://drive.google.com/file/d/1bAg1_NKDapTNLfjUH4H3Rt3KK4w84V9q/view?usp=share_link)
 
-[Download SCAN Model - EfficientNetV2 B0](https://file.io/WMyORCGhUiUt)
+[Download SCAN Model - EfficientNetV2 B0](https://drive.google.com/file/d/1WK3cic2flAF1MKYvmGR6UzVd6URFsHzR/view?usp=share_link)
+
+[Download SCAN Model - ConvNeXt Small](https://drive.google.com/file/d/1BGQo9jdxG-Pv99dcc6fsO28_Qxz12aG-/view?usp=share_link)
+
+[Download SCAN Model - MobileNetV3 Small](https://drive.google.com/file/d/1H5_jE6dE-805Etqg8RxRYKABipn2rC_7/view?usp=share_link)
+
+[Download SCAN Model - ViT B16](https://drive.google.com/file/d/1onoT9Q6Rjz1n8WLeD-lCFpXoEeKbyxrY/view?usp=share_link)
+
 
 ## Example Usage
 Here is a brief example of how to use the SCAN model:
