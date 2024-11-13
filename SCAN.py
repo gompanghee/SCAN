@@ -1,9 +1,9 @@
 """
 COPYRIGHT NOTICE
 
-© 2024 Author #14600 in AAAI 2025. All rights reserved.
+© 2024 Author #15213 in CVPR 2025. All rights reserved.
 
-This software and its associated documentation files (the "Software") are owned by Author #14600 in AAAI 2025. 
+This software and its associated documentation files (the "Software") are owned by Author #15213 in CVPR 2025. 
 The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. 
 Unauthorized use, reproduction, modification, or distribution of the Software is strictly prohibited.
 
