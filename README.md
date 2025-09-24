@@ -1,34 +1,22 @@
 # SCAN: Visual Explanations with Self-Confidence and Representation Analytical Networks
 
 ## Overview
-This repository contains the implementation of SCAN (Self-Confidence and Analytic Networks), a novel method for providing detailed visual explanations in computer vision models. SCAN leverages encoded representations and Self-Confidence Maps to highlight important regions, offering more detailed insights than existing methods like GradCAM, GradCAM++, and LayerCAM.
+This repository contains the implementation of SCAN (Self-Confidence and Analysis Networks), a novel method for providing detailed visual explanations in computer vision models. SCAN leverages encoded representations and Self-Confidence Maps to highlight important regions, offering more detailed insights than existing methods like Explainability, Rollout, GradCAM, GradCAM++, and LayerCAM.
 
 ## Repository Contents
 - SCAN.py: The main implementation file for SCAN.
 - SCAN_Example_Training.ipynb: Jupyter notebook for training the SCAN model.
-- SCAN_Example_Testing.ipynb: Jupyter notebook for testing the SCAN model on various examples.
-- SCAN_Example_Testing_with_ViT.ipynb: Jupyter notebook for testing the SCAN model with Vision Transformer (ViT).
 
 ## Files and Their Purpose
 1. SCAN.py: Contains the core SCAN implementation, including functions for generating Gradient-masked Feature Maps and Self-Confidence Maps.
 2. SCAN_Example_Training.ipynb: Notebook for training the SCAN model on a specified dataset. This notebook includes data preprocessing steps, model training, and saving the trained model.
-3. SCAN_Example_Testing.ipynb: Notebook for testing the SCAN model on various examples to visualize the outputs. It demonstrates how to generate and interpret the Self-Confidence Maps.
-4. SCAN_Example_Testing_with_ViT.ipynb: Similar to the testing notebook but specifically designed for Vision Transformer (ViT) models.
 
 ## Usage
-1. **Training the SCAN Model:**
+### **Training the SCAN Model:**
    - Open the SCAN_Example_Training.ipynb notebook.
    - Follow the steps to preprocess the data, initialize the model, and train it.
    - Save the trained model for later use.
 
-2. **Testing the SCAN Model:**
-   - Open the SCAN_Example_Testing.ipynb notebook.
-   - Load the trained model and run the test cells to generate visual explanations using SCAN.
-   - Interpret the Self-Confidence Maps to understand the model's focus areas.
-
-3. **Testing with Vision Transformer:**
-   - Open the SCAN_Example_Testing_with_ViT.ipynb notebook.
-   - Follow the steps to test the SCAN model specifically with Vision Transformer (ViT) models.
 
 
 ## Example Usage
@@ -40,27 +28,23 @@ Here is a brief example of how to use the SCAN model:
 2. **Run the training notebook:**
    - Open SCAN_Example_Training.ipynb in Jupyter Notebook or JupyterLab.
    - Execute the cells to preprocess data, train the model, and save it.
-
-3. **Run the testing notebook:**
-   - Open SCAN_Example_Testing.ipynb in Jupyter Notebook or JupyterLab.
-   - Load the trained model and run the cells to visualize the Self-Confidence Maps.
   
-4. **Or see the following simple example:**
+3. **Try the follow simple example:**
   ``` python3
   from SCAN import SCAN
 
-  target_model=tf.keras.applications.MobileNetV3Small(input_shape=(224,224,3)) # or your own here
+  target_model=tf.keras.applications.ResNet50V2(input_shape=(224,224,3)) # or your own here
 
-  scanner=SCAN(target_model = target_model, target_layer = 228)\
-                  .set_preprocess(tf.keras.applications.mobilenet_v3.preprocess_input)\
+  scanner=SCAN(target_model = target_model, target_layer = 187)\
+                  .set_preprocess(tf.keras.applications.resnet_v2.preprocess_input)\
                   .set_dataset(train_ds)\
                   .set_validation_dataset(valid_ds)\
                   .generate_decoder(is_Transformer=False)\
                   .compile(loss_alpha=4.0)
 
-  scanner.fit(2)
+  scanner.fit(5)
 
-  self_confidence_map, reconstructed_image = scanner(image, percentile=0)
+  self_confidence_map, reconstructed_image = scanner(image, percentile=95)
   ```
 
 ## License
