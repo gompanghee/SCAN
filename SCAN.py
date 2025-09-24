@@ -1,7 +1,7 @@
 """
 COPYRIGHT NOTICE
 
-© 2024 Anonymous Author(s). All rights reserved.
+© 2025 Anonymous Author(s). All rights reserved.
 
 This software and its associated documentation files (the "Software") are owned by Anonymous Author(s).
 The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. 
@@ -30,6 +30,7 @@ import tensorflow as tf # tested on v2.10.0
 import matplotlib.pyplot as plt # tested on v3.6.1
 import tensorflow_datasets as tfds # tested on v4.9.2
 import numpy as np # tested on v1.24.4
+import tensorflow_addons as tfa # tested on v0.18.0
 
 
 class ResidualModule(tf.keras.layers.Layer):
