@@ -1,9 +1,9 @@
 """
 COPYRIGHT NOTICE
 
-© 2024 Author #9959 in ICCV 2025. All rights reserved.
+© 2024 Anonymous Author(s). All rights reserved.
 
-This software and its associated documentation files (the "Software") are owned by Author #9959 in ICCV 2025. 
+This software and its associated documentation files (the "Software") are owned by Anonymous Author(s).
 The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. 
 Unauthorized use, reproduction, modification, or distribution of the Software is strictly prohibited.
 
@@ -298,7 +298,7 @@ class SCAN:
         return ((x/tf.maximum(tf.abs(x),1e-13))*tf.sin((2*np.pi*tf.abs(x))/tf.maximum(cycle_factor+alpha*tf.abs(x),1e-13))+1.)/2. 
     
             
-    def _nanpercentile(self, x, percentage_range=(0,95), axis=-1):
+    def _nanpercentile(self, x, percentage_range=(70,100), axis=-1):
         q = percentage_range[0] + np.random.rand() * (percentage_range[1] - percentage_range[0])
         return np.nan_to_num(np.nanpercentile(x, q, axis=axis, method='closest_observation').astype(np.float32))
         
@@ -354,8 +354,15 @@ class SCAN:
             gmask_map=tf.cast(gradient_map>=Q, tf.float32)
     
         gradient_masked_feature_maps = feature_map * gmask_map
+
+        feature_size = featuremap.shape[1]
         
-        return gradient_masked_feature_maps, tf.cast(image,tf.float32)/127.5-1.
+        blur_sigma = 224/feature_size/2
+        blur_kernel = int(blur_sigma*4)//2*2+1
+        
+        blurred_image = tfa.image.gaussian_filter2d(image,(blur_kernel, blur_kernel), sigma = blur_sigma)
+        
+        return gradient_masked_feature_maps, tf.cast(blurred_image,tf.float32)/127.5-1.
     
     
     
@@ -369,7 +376,14 @@ class SCAN:
     
         gradient_masked_feature_maps = feature_map * gmask_map
         
-        return gradient_masked_feature_maps, tf.cast(image,tf.float32)/127.5-1.
+        feature_size = featuremap.shape[1]
+        
+        blur_sigma = 224/feature_size/2
+        blur_kernel = int(blur_sigma*4)//2*2+1
+        
+        blurred_image = tfa.image.gaussian_filter2d(image,(blur_kernel, blur_kernel), sigma = blur_sigma)
+        
+        return gradient_masked_feature_maps, tf.cast(blurred_image,tf.float32)/127.5-1.
     
     
         
