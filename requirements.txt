@@ -2,3 +2,4 @@ numpy==1.24.4
 tensorflow==2.10.0
 tensorflow-datasets==4.9.2
 vit-keras==0.1.2
+tensorflow-addons==0.18.0
