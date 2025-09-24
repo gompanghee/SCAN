@@ -29,7 +29,7 @@ Here is a brief example of how to use the SCAN model:
    - Open SCAN_Example_Training.ipynb in Jupyter Notebook or JupyterLab.
    - Execute the cells to preprocess data, train the model, and save it.
   
-3. **Try the follow simple example:**
+3. **Or just try the follow simple example:**
   ``` python3
   from SCAN import SCAN
 
