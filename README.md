@@ -19,7 +19,7 @@ This repository contains the implementation of SCAN (Self-Confidence and Analysi
 
 
 
-### **Testing the SCAN Model:**
+### **Examples:**
 Here is a brief example of how to use the SCAN model:
 
 1. **Install dependencies:**
