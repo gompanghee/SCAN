@@ -1,4 +1,4 @@
-# SCAN: Visual Explanations with Self-Confidence and Representation Analytical Networks
+# SCAN: Visual Explanations with Self-Confidence and Analysis Networks 
 
 ## Overview
 This repository contains the implementation of SCAN (Self-Confidence and Analysis Networks), a novel method for providing detailed visual explanations in computer vision models. SCAN leverages encoded representations and Self-Confidence Maps to highlight important regions, offering more detailed insights than existing methods like Explainability, Rollout, GradCAM, GradCAM++, and LayerCAM.
