@@ -52,3 +52,24 @@ This project is licensed under the CC-BY-NC-SA license. See the LICENSE file for
 
 ## Contact
 For any questions or issues, please open an issue on the GitHub repository.
+
+### BibTex
+```bibtex
+@ARTICLE{Lee2026SCAN,
+  author={Lee, Gwanghee and Jeong, Sungyoon and Jhang, Kyoungson},
+  journal={IEEE Transactions on Artificial Intelligence}, 
+  title={SCAN: Visual Explanations with Self-Confidence and Analysis Networks}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-14},
+  keywords={Image reconstruction;Visualization;Feature extraction;Transformers;Computational modeling;Semantics;Mathematical models;Analytical models;Predictive models;Decision making;Deep Learning;Computer Vision;Explainable AI;Visual Explanations},
+  doi={10.1109/TAI.2026.3665492}}
+
+```
+
+### APA
+```
+G. Lee, S. Jeong and K. Jhang, "SCAN: Visual Explanations with Self-Confidence and Analysis Networks," in IEEE Transactions on Artificial Intelligence, doi: 10.1109/TAI.2026.3665492.
+keywords: {Image reconstruction;Visualization;Feature extraction;Transformers;Computational modeling;Semantics;Mathematical models;Analytical models;Predictive models;Decision making;Deep Learning;Computer Vision;Explainable AI;Visual Explanations},
+```
