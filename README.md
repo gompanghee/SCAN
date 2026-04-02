@@ -1,5 +1,7 @@
 # SCAN: Visual Explanations with Self-Confidence and Analysis Networks (PyTorch Version)
 
+Now, It's published at [✨**IEEE Transactions on Artificial Intelligence**✨](https://ieeexplore.ieee.org/document/11398395) or [Arxiv](https://arxiv.org/abs/2603.06523).
+
 ## Overview
 This repository contains the **PyTorch implementation** of SCAN (Self-Confidence and Analysis Networks), a novel method for providing detailed visual explanations in computer vision models. SCAN leverages encoded representations and Self-Confidence Maps to highlight important regions, offering more detailed insights than existing methods like Explainability, Rollout, GradCAM, GradCAM++, and LayerCAM.
 
